@@ -2,7 +2,23 @@
   "name": "electron-playground",
   "version": "0.1.0",
   "main": "main.js",
+  "description": "playing around with electron",
+  "license": "MIT",
+  "repository": "zacharynewton-wk/electron-playground",
+  "author": {
+    "name": "Zach Newton",
+    "email": "zach.newton@workiva.com"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . --out=dist --asar --overwrite --all"
+  },
+  "dependencies": {
+    "electron-debug": "1.4.0"
+  },
   "devDependencies": {
-    "electron": "^1.7.9"
+    "devtron": "1.4.0",
+    "electron": "1.7.9",
+    "electron-packager": "9.1.0"
   }
 }
