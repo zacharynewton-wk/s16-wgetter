@@ -19,6 +19,8 @@
   "devDependencies": {
     "devtron": "1.4.0",
     "electron": "1.7.9",
-    "electron-packager": "9.1.0"
+    "electron-packager": "9.1.0",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
   }
 }
