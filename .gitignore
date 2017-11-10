@@ -1,2 +1,4 @@
 node_modules
 deps
+dist
+.DS_Store

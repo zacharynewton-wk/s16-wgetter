@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . --out=dist --asar --overwrite --all"
+    "build": "electron-packager . --out=dist --asar --overwrite --all --icon=lib/assets/favicon-96x96.png.icns"
   },
   "dependencies": {
     "electron-debug": "1.4.0"
