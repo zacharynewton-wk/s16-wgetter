@@ -14,6 +14,7 @@
     "build": "electron-packager . --out=dist --asar --overwrite --all --icon=lib/assets/favicon-96x96.png.icns"
   },
   "dependencies": {
+    "@webcomponents/webcomponentsjs": "^1.0.18",
     "electron-debug": "1.4.0"
   },
   "devDependencies": {

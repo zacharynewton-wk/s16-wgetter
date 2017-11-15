@@ -1,0 +1,11 @@
+.test__body {
+    border: 1px solid #dedede;
+    border-radius: 1rem;
+    background-color: #efefef;
+    transition: background-color 150ms ease;
+}
+
+.test__body:hover {
+    background-color: #dedede;
+    cursor: pointer;
+}
