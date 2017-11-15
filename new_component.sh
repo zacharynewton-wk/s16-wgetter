@@ -64,3 +64,5 @@ cat > "$CSS" << CSS
 
 }
 CSS
+
+echo "<link rel=\"import\" href=\"./${CNAME}/${CNAME}.html\">" >> "$DIR/components.html"
