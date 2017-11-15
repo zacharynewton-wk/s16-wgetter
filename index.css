@@ -1,0 +1,34 @@
+.ham-menu {
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+	display: inline-block;
+	width: 3rem;
+	height: 4rem;
+	z-index: 1001;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-font-smoothing: antialiased;
+	white-space: nowrap;
+}
+.ham-menu > span {
+	position: absolute;
+	background-color: #333;
+	display: block;
+	height: 0.2rem;
+	width: 3rem;
+	left: 0.5rem;
+	transition: all 0.4s;
+    z-index: 10;
+    pointer-events: none;
+}
+.ham-menu > span:nth-child(1) {  top: 0.25rem;  }
+.ham-menu > span:nth-child(2) {  top: 1rem;  }
+.ham-menu > span:nth-child(3) {  top: 1.75rem;  }
+
+.ham-menu:hover{  cursor: pointer;  }
+.ham-menu.open > span { width: 9.5vw; top: 6.7vw; left: 4.6vw;  }
+.ham-menu.open > span:nth-child(1) {  transform: rotate(45deg);  }
+.ham-menu.open > span:nth-child(2) {  opacity: 0;  }
+.ham-menu.open > span:nth-child(3) {  transform: rotate(-45deg);  }
