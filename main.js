@@ -11,7 +11,7 @@ function createWindow () {
         icon: path.join(__dirname, 'lib/assets/favicon-96x96.png')
     });
     win.loadURL(url.format({
-        pathname: path.join(__dirname, 'index.html'),
+        pathname: path.join(__dirname, 'lib/src/index.html'),
         protocol: 'file:',
         slashes: true
     }))

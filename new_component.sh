@@ -4,7 +4,8 @@ if [ -z $CNAME ]; then
     echo "Component Name required."
     exit
 fi
-DIR="./lib/src/components"
+cd ./lib/src
+DIR="./components"
 COMP_DIR="$DIR/$CNAME"
 if [ -d "$COMP_DIR" ]; then
     echo ""
@@ -66,3 +67,4 @@ cat > "$CSS" << CSS
 CSS
 
 echo "<link rel=\"import\" href=\"./${CNAME}/${CNAME}.html\">" >> "$DIR/components.html"
+cd ../..
