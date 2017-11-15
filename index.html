@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="deps/web-skin/dist/css/web-skin.min.css">
     <link rel="stylesheet" href="index.css">
   </head>
-  <body>
-    <h1>Electron Playground</h1>
-    <p>We are using node <script>document.write(process.versions.node)</script>,</p>
-    <p>Chrome <script>document.write(process.versions.chrome)</script>,</p>
-    <p>and Electron <script>document.write(process.versions.electron)</script>.</p>
+  <body ontouchstart>
+    <div class="container-wide">
+      <div class="row">
+        <div class="col-xs-3 sidebar"><h3>Sidebar</h3></div>
+        <div class="col-xs-9 main"><h1>Electron Playground</h1></div>
+      </div>
+    </div>
+    <script src="deps/web-skin/dist/js/web-skin.min.js"></script>
   </body>
 </html>
