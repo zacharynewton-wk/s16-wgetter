@@ -43,9 +43,9 @@ for file in master_idx_files:
             continue
 
         cik = pad_cik(line.split('|')[0])
-        if len(sys.argv) > 1:
+        if len(sys.argv[1:]) > 1:
             found_cik = False
-            for cik_arg in sys.argv:
+            for cik_arg in sys.argv[1:]:
                 if pad_cik(cik_arg) == cik:
                     found_cik = True
                     break
@@ -55,12 +55,13 @@ for file in master_idx_files:
         path = line.split('|')[4]
         accession_number = path.split('/')[3].replace('.txt', '').strip()
         split_path = path.split('/')
+        outputDir = sys.argv[0]
 
-        print "ftp.sec.gov/%s/%s/%s/%s/*.xml -O output/%s.xml" % (
-        split_path[0], split_path[1], split_path[2], accession_number.replace('-', ''), accession_number)
+        print "ftp.sec.gov/%s/%s/%s/%s/*.xml -O %s/%s.xml" % (
+        split_path[0], split_path[1], split_path[2], accession_number.replace('-', ''), outputDir, accession_number)
 
-        url = "./wget -nv ftp://ftp.sec.gov/%s/%s/%s/%s/*.xml -O output/%s.xml" % (
-        split_path[0], split_path[1], split_path[2], accession_number.replace('-', ''), accession_number)
+        url = "./wget -nv ftp://ftp.sec.gov/%s/%s/%s/%s/*.xml -O %s/%s.xml" % (
+        split_path[0], split_path[1], split_path[2], accession_number.replace('-', ''), outputDir, accession_number)
         commands.getstatusoutput(url)
         print url
     #os.system(url)
