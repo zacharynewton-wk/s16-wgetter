@@ -57,12 +57,14 @@ for file in master_idx_files:
         split_path = path.split('/')
         outputDir = sys.argv[0]
 
-        print "ftp.sec.gov/%s/%s/%s/%s/*.xml -O %s/%s.xml" % (
+        url = "ftp.sec.gov/%s/%s/%s/%s/*.xml -O %s/%s.xml" % (
         split_path[0], split_path[1], split_path[2], accession_number.replace('-', ''), outputDir, accession_number)
+        print url
+        os.system(url)
 
         url = "./wget -nv ftp://ftp.sec.gov/%s/%s/%s/%s/*.xml -O %s/%s.xml" % (
         split_path[0], split_path[1], split_path[2], accession_number.replace('-', ''), outputDir, accession_number)
         commands.getstatusoutput(url)
         print url
-    #os.system(url)
+        os.system(url)
 f.close()
