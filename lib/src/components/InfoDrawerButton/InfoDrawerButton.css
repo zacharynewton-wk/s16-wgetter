@@ -1,0 +1,9 @@
+.info-drawer-button__div {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.info-drawer-button__div {
+    cursor: pointer;
+}

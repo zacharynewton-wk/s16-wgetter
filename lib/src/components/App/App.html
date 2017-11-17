@@ -1,7 +1,9 @@
 <template id="app-template">
     <link rel="stylesheet" href="components/App/App.css">
-    <div class="container-wide">
-        <test-component greeting="Howdy"></test-component>
+    <link rel="stylesheet" href="../../deps/web-skin/dist/css/web-skin.min.css">
+    <div class="app">
+        <app-button onclick="console.log('Clicked')" class="btn-primary">Click Me!</app-button>
+        <info-drawer></info-drawer>
     </div>
 </template>
 <script src="./App.js"></script>

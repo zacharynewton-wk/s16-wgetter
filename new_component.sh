@@ -30,7 +30,8 @@ SNAKE_CNAME=$(echo "$FIRST_LOWER_CNAME" | sed 's/\([A-Z]\)/-\1/g' | awk '{print 
 
 cat > "$HTML" << HTML
 <template id="${SNAKE_CNAME}-template">
-    <link rel="stylesheet" href="lib/src/components/${CNAME}/${CNAME}.css">
+    <link rel="stylesheet" href="${DIR}/${CNAME}/${CNAME}.css">
+    <link rel="stylesheet" href="../../deps/web-skin/dist/css/web-skin.min.css">
     <div class="${SNAKE_CNAME}__div"></div>
 </template>
 <script src="./${CNAME}.js"></script>
@@ -46,7 +47,7 @@ class ${CNAME} extends HTMLElement {
     }
     connectedCallback() {
         const shadowRoot = this.attachShadow({mode: 'open'});
-        const template = testComponentOwner.getElementById('${SNAKE_CNAME}-template');
+        const template = ${FIRST_LOWER_CNAME}Owner.getElementById('${SNAKE_CNAME}-template');
         const instance = template.content.cloneNode(true);
         shadowRoot.appendChild(instance);
         this.render();

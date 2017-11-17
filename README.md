@@ -1,5 +1,5 @@
-# Electron Playground
-Using electron to build an app using web components.
+# Section 16 wgetter
+Using electron to build an app using web components that lets CSMs use `s16wgetter.py` without a terminal.
 
 ## Setup
 To help develop this application or use its code, use the following commands. Pretty standard stuff, but always good to write it down somewhere.

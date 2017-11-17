@@ -1,8 +1,8 @@
 {
-  "name": "electron-playground",
+  "name": "section_16_wgetter",
   "version": "0.1.0",
   "main": "main.js",
-  "description": "playing around with electron",
+  "description": "Desktop app for section 16 wgetter",
   "license": "MIT",
   "repository": "zacharynewton-wk/electron-playground",
   "author": {
