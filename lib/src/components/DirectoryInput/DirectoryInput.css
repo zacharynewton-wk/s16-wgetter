@@ -1,0 +1,41 @@
+.directory-input__div {
+    --padding-vert: 0.4rem;
+    --padding-horiz: 0.4rem;
+    --width: 30rem;
+    --border: 1px solid #aeaeae;
+    margin: 0.5rem 0;
+}
+
+.directory-input__div {
+    border: var(--border);
+    border-radius: 0.4rem;
+    width: var(--width);
+    display: flex;
+}
+.directory-input__div:hover {
+    cursor: pointer;
+}
+
+#directory-display {
+    flex-grow: 3;
+    padding: var(--padding-vert) var(--padding-horiz);
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+#directory-display.empty {
+    font-style: italic;
+    opacity: 0.5;
+}
+
+.directory-button {
+    flex-basis: 4rem;
+    text-align: center;
+    padding: var(--padding-vert) var(--padding-horiz);
+    background-color: #dedede;
+    border-left: var(--border);
+    transition: background-color 150ms ease;
+}
+.directory-input__div:hover .directory-button {
+    background-color: #cecece;
+}

@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron');
+const {app, dialog, BrowserWindow} = require('electron');
 const path = require('path');
 const url = require('url');
 
@@ -14,7 +14,7 @@ function createWindow () {
         pathname: path.join(__dirname, 'lib/src/index.html'),
         protocol: 'file:',
         slashes: true
-    }))
+    }));
     win.on('closed', () => {win = null;})
 }
 
@@ -31,3 +31,7 @@ app.on('activate', () => {
         createWindow();
     }
 })
+
+module.exports.selectDirectory = function () {
+    selectDirectory();
+}
