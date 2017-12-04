@@ -15,8 +15,8 @@ import os
 
 # master.idx files from: ftp://ftp.sec.gov/edgar/full-index/<4 digit year>/QTR<1-4>/master.idx
 master_idx_files = []
-for filename in os.listdir('master_idx'):
-    master_idx_files.append(os.path.join('master_idx', filename))
+for filename in os.listdir(sys.argv[2]):
+    master_idx_files.append(os.path.join(sys.argv[2], filename))
     
 def pad_cik(cik):
     c = cik
@@ -43,9 +43,9 @@ for file in master_idx_files:
             continue
 
         cik = pad_cik(line.split('|')[0])
-        if len(sys.argv[1:]) > 1:
+        if len(sys.argv[2:]) > 1:
             found_cik = False
-            for cik_arg in sys.argv[1:]:
+            for cik_arg in sys.argv[2:]:
                 if pad_cik(cik_arg) == cik:
                     found_cik = True
                     break
@@ -55,16 +55,21 @@ for file in master_idx_files:
         path = line.split('|')[4]
         accession_number = path.split('/')[3].replace('.txt', '').strip()
         split_path = path.split('/')
-        outputDir = sys.argv[0]
+        outputDir = sys.argv[1]
 
-        url = "ftp.sec.gov/%s/%s/%s/%s/*.xml -O %s/%s.xml" % (
+        url = "www.sec.gov/%s/%s/%s/%s/edgar.xml -O %s/%s.xml" % (
         split_path[0], split_path[1], split_path[2], accession_number.replace('-', ''), outputDir, accession_number)
         print url
-        os.system(url)
+        # os.system(url)
+        print
 
-        url = "./wget -nv ftp://ftp.sec.gov/%s/%s/%s/%s/*.xml -O %s/%s.xml" % (
+        url = "wget -nv https://www.sec.gov/Archives/%s/%s/%s/%s/edgar.xml -O %s/%s.xml" % (
         split_path[0], split_path[1], split_path[2], accession_number.replace('-', ''), outputDir, accession_number)
         commands.getstatusoutput(url)
         print url
         os.system(url)
-f.close()
+        print
+if f:
+    f.close()
+print "finished"
+sys.stdout.flush()

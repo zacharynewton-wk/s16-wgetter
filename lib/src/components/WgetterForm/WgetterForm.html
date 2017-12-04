@@ -2,9 +2,15 @@
     <link rel="stylesheet" href="./components/WgetterForm/WgetterForm.css">
     <link rel="stylesheet" href="../../deps/web-skin/dist/css/web-skin.min.css">
     <div class="wgetter-form__div">
-        <directory-input id="directory-input"></directory-input>
+        <label for="midx-dir-input">Master.idx Files Directory</label>
+        <directory-input id="midx-dir-input"></directory-input>
+        <label for="out-dir-input">Output Directory</label>
+        <directory-input id="out-dir-input"></directory-input>
+        <label for="list-builder">CIK List</label>
         <list-builder id="list-builder"></list-builder>
         <button id="download-button" class="btn btn-primary">Download</button>
+        <div id="dl-progress-out" class="l-margin-top-lg text-muted text-sm"></div>
+        <div id="dl-out" class="l-margin-top-lg"></div>
         <div class="save-defaults-wrapper">
             <label for="save"><input type="checkbox" name="save" id="save"> Save as defaults</label>
         </div>

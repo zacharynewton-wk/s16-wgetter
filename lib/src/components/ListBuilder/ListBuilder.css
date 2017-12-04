@@ -1,3 +1,58 @@
 .list-builder__div {
+    --padding-vert: 0.4rem;
+    --padding-horiz: 0.4rem;
+    --width: 30rem;
+    --border: 1px solid #aeaeae;
+}
+.list-builder__div {
+    width: var(--width);
+    display: flex;
+    flex-direction: column;
+}
+.list-builder__div input {
+    padding: var(--padding-vert) var(--padding-horiz);
+    width: calc(var(--width) - 4rem);
+    margin-top: 0.1rem;
+    border-radius: 0.4rem;
+    border: var(--border);
+}
+.list-builder__div .btn {
+    padding: var(--padding-vert) calc(var(--padding-horiz) + 0.5rem);
+    text-align: center;
+    min-height: unset;
+}
+.list-builder__div .btn i {
+    margin-right: 0;
+    padding: 0 0.3rem;
+}
 
+.list-builder__div ul {
+    width: 85%;
+    max-height: 23rem;
+    list-style: none;
+    margin-left: 0;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.list-builder__div li {
+    display: flex;
+    padding: 0.5rem 2rem;
+    padding-right: 0;
+}
+.list-builder__div li:not(:last-child) {
+    border-bottom: var(--border);
+    border-bottom-color: #bebebe;
+}
+.list-builder__div li > * {
+    display: flex;
+    align-items: center;
+}
+.list-builder__div li > *:first-child {
+    flex-grow: 4;
+}
+.list-builder__div li > *:last-child {
+    flex-basis: 3rem;
+    border-radius: 0;
+    border-left: var(--border);
+    border-left-color: #dedede;
 }

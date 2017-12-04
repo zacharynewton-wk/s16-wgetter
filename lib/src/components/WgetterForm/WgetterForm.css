@@ -1,7 +1,9 @@
 .wgetter-form__div {
 
 }
-
+.wgetter-form__div .save-defaults-wrapper > label { 
+    margin-top: 1rem;
+}
 .wgetter-form__div .save-defaults-wrapper {
     margin-top: 0.3rem;
 }

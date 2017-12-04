@@ -1,6 +1,14 @@
 <template id="list-builder-template">
     <link rel="stylesheet" href="./components/ListBuilder/ListBuilder.css">
     <link rel="stylesheet" href="../../deps/web-skin/dist/css/web-skin.min.css">
-    <div class="list-builder__div"></div>
+    <div class="list-builder__div">
+        <div class="input-wrapper">
+            <input type="text" name="cik" id="cik-input">
+            <button class="btn btn-primary" id="cik-add-btn">
+                <i class="icon icon-plus"></i>
+            </button>
+        </div>
+        <ul id="cik-list"></ul>
+    </div>
 </template>
 <script src="./ListBuilder.js"></script>
