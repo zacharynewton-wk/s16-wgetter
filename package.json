@@ -17,7 +17,8 @@
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^1.0.18",
-    "electron-debug": "1.4.0"
+    "electron-debug": "1.4.0",
+    "wget-improved": "^1.5.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
