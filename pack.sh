@@ -1,8 +1,17 @@
 #!/bin/bash
 
 # VARS
-OUTFOLDER="public/assets"
-BUILDPATH="dist"
+OUTFOLDER="dist"
+if [ ! -d "$OUTFOLDER/mac" ]; then
+    mkdir "$OUTFOLDER/mac"
+fi
+if [ ! -d "$OUTFOLDER/windows" ]; then
+    mkdir "$OUTFOLDER/windows"
+fi
+if [ ! -d "$OUTFOLDER/linux" ]; then
+    mkdir "$OUTFOLDER/linux"
+fi
+BUILDPATH="build"
 MAC="darwin-x64"
 WIN32="win32-ia32"
 WIN64="win32-x64"

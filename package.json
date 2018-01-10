@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . --out=dist --asar --overwrite --all --icon=lib/assets/favicon-96x96.png.icns",
+    "build": "electron-packager . --out=build --asar --overwrite --all --icon=lib/assets/favicon-96x96.png.icns",
     "test": "npm run test-unit",
     "test-unit": "NODE_ENV=test mocha --require co-mocha 'test/*.spec.js"
   },
