@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fefefe;
+    font-family: Helvetica, Arial, sans-serif;
+}
+* {
+    position: relative;
+    box-sizing: border-box;
+}
+
+nav {
+    text-align: center;
+}
+nav div {
+    justify-content: center;
+    display: flex;
+}
+
+nav span {
+    flex-basis: 10rem;
+    flex-grow: 1;
+    display: inline-block;
+    width: 15rem;
+    border: 1px solid #ddd;
+    background-color: #efefef;  
+    padding: 0.4rem;
+    transition: all 125ms ease;
+}
+nav span:not(.active):hover {
+    cursor: pointer;
+    background-color: #f4f4f4;
+    border-color: #f4f4f4;
+}
+nav span.active {
+    border-color: #fefefe;
+    background-color: #fefefe;
+}
