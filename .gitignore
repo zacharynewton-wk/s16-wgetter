@@ -4,3 +4,6 @@ dist
 .DS_Store
 package-lock.json
 .vscode
+public/assets/mac
+public/assets/windows
+public/assets/linux
