@@ -1,27 +1,116 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <title>Downloads: Section 16 WGetter</title>
+    <meta name="msapplication-TileColor" content="#66CC00">
+    <title>Section 16 WGetter - Downloads</title>
+    <link rel="icon" type="image/png" href="https://cdn.wdesk.com/wdesk/0.9.9/packages/web_skin/dist/ico/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="https://cdn.wdesk.com/wdesk/0.9.9/packages/web_skin/dist/ico/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://cdn.wdesk.com/wdesk/0.9.9/packages/web_skin/dist/ico/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://cdn.wdesk.com/wdesk/0.9.9/packages/web_skin/dist/ico/favicon-32x32.png" sizes="32x32">
+    
     <link rel="stylesheet" href="public/index.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
   </head>
   <body ontouchstart>
     <nav>
-        <div>
+        <div class="header-wrapper">
             <h1>Section 16 WGetter</h1>
+            <p>A desktop alternative to that old python script</p>
         </div>
-        <div>
+        <div class="navbar-wrapper">
             <span id="nav-windows"><i class="fab fa-windows"></i> Windows</span>
             <span id="nav-mac"><i class="fab fa-apple"></i> Mac</span>
             <span id="nav-linux"><i class="fab fa-linux"></i> Linux</span>
         </div>
     </nav>
     <main>
-        <div id="main-windows"></div>
-        <div id="main-mac"></div>
-        <div id="main-linux"></div>
+        <section id="main-windows">
+            <div class="install-cards">
+                <a class="install-card" target="_blank" href="">
+                    <div class="icon">
+                        <i class="fab fa-windows fa-7x"></i>
+                    </div>
+                    <div class="footer">
+                        <i class="fas fa-download"></i> Download 64-bit
+                    </div>
+                </a>
+                <a class="install-card" target="_blank" href="">
+                    <div class="icon">
+                        <i class="fab fa-windows fa-7x"></i>
+                    </div>
+                    <div class="footer">
+                        <i class="fas fa-download"></i> Download 32-bit
+                    </div>
+                </a>
+                <a class="install-card" target="_blank" href="">
+                    <div class="icon">
+                        <i class="fas fa-folder fa-7x"></i>
+                    </div>
+                    <div class="footer">
+                        <i class="fas fa-download"></i> Download 64-bit .zip
+                    </div>
+                </a>
+                <a class="install-card" target="_blank" href="">
+                    <div class="icon">
+                        <i class="fas fa-folder fa-7x"></i>
+                    </div>
+                    <div class="footer">
+                        <i class="fas fa-download"></i> Download 32-bit .zip
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section id="main-mac">
+            <div class="install-cards">
+                <a class="install-card" target="_blank" href="">
+                    <div class="icon">
+                        <i class="fab fa-apple fa-7x"></i>
+                    </div>
+                    <div class="footer">
+                        <i class="fas fa-download"></i> Download
+                    </div>
+                </a>
+                <a class="install-card" target="_blank" href="">
+                    <div class="icon">
+                        <i class="fas fa-folder fa-7x"></i>
+                    </div>
+                    <div class="footer">
+                        <i class="fas fa-download"></i> Download .zip
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section id="main-linux">
+            <div class="install-cards">
+                <a class="install-card" target="_blank" href="">
+                    <div class="icon">
+                        <i class="fas fa-folder fa-7x"></i>
+                    </div>
+                    <div class="footer">
+                        <i class="fas fa-download"></i> Download 64-bit .zip
+                    </div>
+                </a>
+                <a class="install-card" target="_blank" href="">
+                    <div class="icon">
+                        <i class="fas fa-folder fa-7x"></i>
+                    </div>
+                    <div class="footer">
+                        <i class="fas fa-download"></i> Download 32-bit .zip
+                    </div>
+                </a>
+                <a class="install-card" target="_blank" href="">
+                    <div class="icon">
+                        <i class="fas fa-folder fa-7x"></i>
+                    </div>
+                    <div class="footer">
+                        <i class="fas fa-download"></i> Download arm7l .zip
+                    </div>
+                </a>
+            </div>
+        </section>
     </main>
     <footer></footer>
     <script src="public/index.js"></script>

@@ -2,6 +2,9 @@
 
 # VARS
 OUTFOLDER="dist"
+if [ ! -d "$OUTFOLDER" ]; then
+    mkdir "$OUTFOLDER"
+fi
 if [ ! -d "$OUTFOLDER/mac" ]; then
     mkdir "$OUTFOLDER/mac"
 fi
