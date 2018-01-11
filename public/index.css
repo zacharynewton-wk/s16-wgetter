@@ -86,20 +86,20 @@ main .install-cards {
     color: inherit;
     box-shadow: 1px 2px 3px rgba(0,0,0,0.05);
     transition: all 125ms ease;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .install-card:hover {
     box-shadow: 2px 3px 4px rgba(0,0,0,0.1);
 }
-.install-card:hover, .install-card.suggested,
-.install-card:hover .footer, .install-card.suggested .footer {
+.install-card:hover,
+.install-card:hover .footer {
     border-color: #33a9ff;
 }
-.install-card:hover .footer, .install-card.suggested .footer {
+.install-card:hover .footer{ 
     background-color: #33a9ff;
     color: #fefefe;
 }
-.install-card:hover .icon, .install-card.suggested .icon {
+.install-card:hover .icon {
     color: #33a9ff;
 }
 .install-card .icon {
@@ -118,7 +118,18 @@ main .install-cards {
     justify-content: center;
     border-top: 1px solid #dedede;
     transition: all 125ms ease;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
 }
 .install-card .footer .fa-download {
     margin-right: 0.5rem;
+}
+
+.install-card.suggested::after {
+    content: "Suggested";
+    display: block;
+    position: absolute;
+    top: 1rem;
+    width: var(--card-width);
+    color: #33a9ff;
 }

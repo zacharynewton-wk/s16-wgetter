@@ -16,6 +16,24 @@ function detectOS() {
     return OSName;
 }
 
+function assignSuggestedDL() {
+    let osname = detectOS();
+    let parentElement = document.getElementById(`main-${osname}`);
+    let osbit = '';
+    if (osname == 'mac') {
+        osbit = 'mac'
+    } else if (navigator.userAgent.indexOf("WOW64") != -1 || 
+        navigator.userAgent.indexOf("Win64") != -1 ){
+        osbit = '64';
+    } else {
+        osbit = '32';
+    }
+    let suggestedCards = parentElement.getElementsByClassName(`${osbit}-bit`);
+    for (let i = 0; i < suggestedCards.length; i++) {
+        suggestedCards[i].classList.add('suggested');
+    }
+}
+
 function assignOSActive() {
     let osName = detectOS();
     if (availableForDL.indexOf(osName) == -1) {
@@ -46,3 +64,4 @@ function assignNavListeners() {
 
 assignOSActive();
 assignNavListeners();
+assignSuggestedDL();
