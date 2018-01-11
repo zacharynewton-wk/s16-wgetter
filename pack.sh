@@ -33,8 +33,8 @@ WIN64PATH="$WIN64DIR/section_16_wgetter.exe"
 
 # Copy Executables
 cp "$MACPATH" "$OUTFOLDER/mac"
-cp "$WIN32PATH" "$OUTFOLDER/windows"
-cp "$WIN64PATH" "$OUTFOLDER/windows"
+cp "$WIN32PATH" "$OUTFOLDER/windows/section_16_wgetter-win32-ia32.exe"
+cp "$WIN64PATH" "$OUTFOLDER/windows/section_16_wgetter-win32-x64.exe"
 
 # Zip Folders
 zip -r "$OUTFOLDER/mac/section_16_wgetter-$MAC.zip" "$MACDIR"

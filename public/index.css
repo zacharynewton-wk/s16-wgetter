@@ -133,3 +133,26 @@ main .install-cards {
     width: var(--card-width);
     color: #33a9ff;
 }
+
+.instructions {
+    padding: 1rem;
+}
+.instructions li {
+    line-height: 1.5em;
+}
+.instructions code {
+    background-color: #dedede;
+    border-radius: 3px;
+    padding: 2px 3px;
+}
+.instructions .disclaimer {
+    background-color: #fdeccb;
+    border: 1px solid #FDCE74;
+    color: #da9414;
+    border-radius: 3px;
+    padding: 2px 3px;
+}
+.instructions .disclaimer::before {
+    content: "Disclaimer: ";
+    font-weight: 600;
+}
