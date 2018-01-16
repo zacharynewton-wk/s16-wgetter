@@ -64,4 +64,4 @@ function assignNavListeners() {
 
 assignOSActive();
 assignNavListeners();
-assignSuggestedDL();
+// assignSuggestedDL();

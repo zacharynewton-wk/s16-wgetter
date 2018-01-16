@@ -8,3 +8,4 @@ package-lock.json
 public/assets/mac
 public/assets/windows
 public/assets/linux
+yarn.lock

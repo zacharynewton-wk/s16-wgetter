@@ -1,0 +1,28 @@
+# https://www.electron.build/configuration/configuration#MetadataDirectories-buildResources
+appId: com.workiva.s16wgetter
+directories:
+  output: dist
+  buildResources: build
+linux:
+  target:
+    # - snap
+    - deb
+    - rpm
+    - zip
+    - tar.gz
+  icon: lib/assets
+  category: Utility
+  synopsis: Download SEC files from master.idx files
+win:
+  target:
+    - nsis
+    - portable
+    - zip
+  # icon: lib/assets/favicon-96x96.png
+mac:
+  target:
+    - dmg
+    - zip
+  # icon: lib/assets/favicon-96x96.png.icns
+  category: public.app-category.utilities
+
