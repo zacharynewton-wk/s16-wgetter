@@ -1,6 +1,5 @@
 node_modules
 deps
-dist
 build
 .DS_Store
 package-lock.json
@@ -9,3 +8,7 @@ public/assets/mac
 public/assets/windows
 public/assets/linux
 yarn.lock
+dist/*.yaml
+dist/*.yml
+dist/*.blockmap
+dist/*/

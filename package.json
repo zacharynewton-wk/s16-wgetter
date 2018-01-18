@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "electron .",
-    "build": "npm-run-all build-mac && build-win && build-linux",
+    "build": "npm-run-all build-mac build-win build-linux",
     "build-mac": "electron-builder -m",
     "build-win": "electron-builder -w",
     "build-linux": "electron-builder -l",
