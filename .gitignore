@@ -8,7 +8,4 @@ public/assets/mac
 public/assets/windows
 public/assets/linux
 yarn.lock
-dist/*.yaml
-dist/*.yml
-dist/*.blockmap
-dist/*/
+dist
