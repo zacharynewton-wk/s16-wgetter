@@ -87,7 +87,7 @@ main .install-cards {
     color: inherit;
     box-shadow: 1px 2px 3px rgba(0,0,0,0.05);
     transition: all 125ms ease;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .install-card:hover {
     box-shadow: 2px 3px 4px rgba(0,0,0,0.1);
