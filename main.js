@@ -6,7 +6,7 @@ let win;
 
 function createWindow () {
     win = new BrowserWindow({
-        width: 800, 
+        width: 350, 
         height: 600,
         icon: path.join(__dirname, 'lib/assets/favicon-96x96.png')
     });
