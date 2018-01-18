@@ -1,4 +1,5 @@
 const availableForDL = ['windows', 'mac', 'linux'];
+const version = '0.1.0';
 
 // Src: http://www.javascripter.net/faq/operatin.htm
 // This script sets OSName variable as follows:
@@ -62,6 +63,38 @@ function assignNavListeners() {
     }
 }
 
+function setDownloadLinks() {
+    const base_url = `https://github.com/zacharynewton-wk/s16-wgetter/releases/download/v${version}/section-16-wgetter`;
+    // Windows Installer
+    let win_inst_dl = document.getElementById('win-inst-dl');
+    win_inst_dl.setAttribute('href', `${base_url}.Setup.${version}.exe`);
+    // Windows Portable
+    let win_port_dl = document.getElementById('win-port-dl');
+    win_port_dl.setAttribute('href', `${base_url}.${version}.exe`);
+    // Windows Zip
+    let win_zip_dl = document.getElementById('win-zip-dl');
+    win_zip_dl.setAttribute('href', `${base_url}-${version}-win.zip`);
+    // Mac Dmg
+    let mac_dmg_dl = document.getElementById('mac-dmg-dl');
+    mac_dmg_dl.setAttribute('href', `${base_url}-${version}.dmg`);
+    // Mac Zip
+    let mac_zip_dl = document.getElementById('mac-zip-dl');
+    mac_zip_dl.setAttribute('href', `${base_url}-${version}-mac.zip`);
+    // Linux Deb
+    let linux_deb_dl = document.getElementById('linux-deb-dl');
+    linux_deb_dl.setAttribute('href', `${base_url}_${version}_amd64.deb`);
+    // Linux RPM
+    let linux_rpm_dl = document.getElementById('linux-rpm-dl');
+    linux_rpm_dl.setAttribute('href', `${base_url}-${version}.x86_64.rpm`);
+    // Linux tar.gz
+    let linux_tar_dl = document.getElementById('linux-tar-dl');
+    linux_tar_dl.setAttribute('href', `${base_url}-${version}.tar.gz`);
+    // Linux zip
+    let linux_zip_dl = document.getElementById('linux-zip-dl');
+    linux_zip_dl.setAttribute('href', `${base_url}-${version}.zip`);
+}
+
 assignOSActive();
 assignNavListeners();
+setDownloadLinks();
 // assignSuggestedDL();
