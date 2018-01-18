@@ -46,7 +46,7 @@ nav span {
     border: 1px solid #dedede;
     border-top: none;
     background-color: #efefef;  
-    padding: 0.4rem;
+    padding: 1rem 0.4rem;
     transition: all 125ms ease;
 }
 nav span:not(.active):hover {
@@ -76,6 +76,7 @@ main .install-cards {
 
 .install-card {
     display: block;
+    background-color: #fff;
     width: var(--card-width);
     height: var(--card-height);
     margin: 1rem 2rem;
@@ -109,6 +110,12 @@ main .install-cards {
     align-items: center;
     justify-content: center;
     transition: all 125ms ease;
+}
+.install-card .icon .icon-description {
+    position: absolute;
+    display: block;
+    bottom: 1rem;
+    width: var(--card-width);
 }
 .install-card .footer {
     width: var(--card-width);

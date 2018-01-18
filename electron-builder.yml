@@ -18,11 +18,11 @@ win:
     - nsis
     - portable
     - zip
-  # icon: lib/assets/favicon-96x96.png
+  icon: lib/assets/favicon-256x256.png.ico
 mac:
   target:
     - dmg
     - zip
-  # icon: lib/assets/favicon-96x96.png.icns
+  icon: lib/assets/favicon-96x96.png.icns
   category: public.app-category.utilities
 

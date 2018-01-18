@@ -11,8 +11,10 @@
   },
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . --out=build --asar --overwrite --all --icon=lib/assets/favicon-96x96.png.icns",
-    "build-mwl": "electron-builder -mwl",
+    "build": "npm-run-all build-mac && build-win && build-linux",
+    "build-mac": "electron-builder -m",
+    "build-win": "electron-builder -w",
+    "build-linux": "electron-builder -l",
     "dist": "electron-builder -mwl",
     "test": "npm run test-unit",
     "test-unit": "NODE_ENV=test mocha --require co-mocha 'test/*.spec.js"
@@ -27,7 +29,6 @@
     "devtron": "1.4.0",
     "electron": "1.7.9",
     "electron-builder": "^19.52.1",
-    "electron-packager": "9.1.0",
     "mocha": "^4.0.1",
     "npm-run-all": "^4.1.2",
     "sinon": "^4.1.2",
