@@ -1,5 +1,5 @@
 const availableForDL = ['windows', 'mac', 'linux'];
-const version = '0.1.0';
+const version = '0.2.0';
 
 // Src: http://www.javascripter.net/faq/operatin.htm
 // This script sets OSName variable as follows:
